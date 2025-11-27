@@ -17,7 +17,7 @@ const CommentArea = ({ asin }) => {
           'https://striveschool-api.herokuapp.com/api/comments/' + asin,
           {
             headers: {
-              Authorization: 'Bearer inserisci-qui-il-tuo-token',
+              Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTFmMjE4ZjIzZTc0MDAwMTVmN2ZkZGYiLCJpYXQiOjE3NjM2NDc4ODcsImV4cCI6MTc2NDg1NzQ4N30.bUKzmEZrP_XuInVZkHwAnbFFrLLQdMQ-Na7FLIh6oYo',
             },
           }
         )
@@ -44,7 +44,7 @@ const CommentArea = ({ asin }) => {
   }, [asin])
 
   return (
-    <div className="text-center">
+    <div className="text-center" data-testid='comment-area'>
       {isLoading && <Loading />}
       {isError && <Error />}
       <AddComment asin={asin} />

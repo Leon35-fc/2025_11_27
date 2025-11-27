@@ -4,9 +4,10 @@ import fantasy from '../data/fantasy.json'
 const AllTheBooks = () => {
   return (
     <Row className="g-2">
-      {fantasy.map((book) => {
+      {fantasy.map((book, i) => {
+        console.log(i)
         return (
-          <Col xs={12} md={4} key={book.asin}>
+          <Col xs={12} md={4} key={book.asin} >
             <Card className="book-cover d-flex flex-column">
               <Card.Img variant="top" src={book.img} />
               <Card.Body>
