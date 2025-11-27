@@ -4,13 +4,13 @@ import CommentArea from '../components/CommentArea'
 
 describe('Testing CommentArea mounting', () => {
 
-    it('Check if CommentArea is mounted', async () => {
+    it('Check if CommentArea is mounted', () => {
 
     render(<CommentArea/>)
 
-    const comments = await screen.getByTestId('comment-area')
+    const comments = screen.getByTestId('comment-area')
 
-    expect( comments ).toBeInTheDocument()
+    expect(comments).toBeInTheDocument()
     })
 
 })
